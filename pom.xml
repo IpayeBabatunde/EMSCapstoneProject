@@ -54,6 +54,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>javax.transaction-api</artifactId>
+            <version>1.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -78,6 +85,7 @@
                         <exclude>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <property name="hibernate.transaction.jta.platform" value="org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform"/>
                         </exclude>
                     </excludes>
                 </configuration>
